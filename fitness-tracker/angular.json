@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "fitenss-tracker"
+  "defaultProject": "fitenss-tracker",
+  "cli": {
+    "analytics": false
+  }
 }
