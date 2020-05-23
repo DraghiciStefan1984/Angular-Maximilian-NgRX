@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material';
 
 import { StopTrainingComponent } from './stop-training.component';
 

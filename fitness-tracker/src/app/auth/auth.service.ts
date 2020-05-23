@@ -1,16 +1,16 @@
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subject } from 'rxjs/Subject';
 
 import { User } from './user.model';
 import { AuthData } from './auth-data.model';
-import { Injectable } from "@angular/core";
-import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
   authChange = new Subject<boolean>();
   private user: User;
 
-  constructor(private router: Router){}
+  constructor(private router: Router) {}
 
   registerUser(authData: AuthData) {
     this.user = {
@@ -31,7 +31,7 @@ export class AuthService {
   logout() {
     this.user = null;
     this.authChange.next(false);
-    this.router.navigate(['/logout']);
+    this.router.navigate(['/login']);
   }
 
   getUser() {
