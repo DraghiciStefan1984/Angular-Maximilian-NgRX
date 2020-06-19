@@ -1,1 +1,28 @@
-<p>login works!</p>
+<form 
+    fxLayout="column" 
+    fxLayoutAlign="center center" 
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()">
+    <mat-form-field hintLabel="Please enter a valid email.">
+        <input 
+            type="email" 
+            matInput 
+            placeholder="Email" 
+            formCOntrolName="email">
+            <mat-error>Invalid email</mat-error>
+    </mat-form-field>
+    <mat-form-field hintLabel="Password must be at least 8 chars long.">
+        <input 
+            type="password" 
+            matInput 
+            placeholder="Password" 
+            formCOntrolName="password">
+            <mat-error>Invalid password</mat-error>
+    </mat-form-field>
+    <button 
+        type="submit" 
+        mat-raised-button 
+        color="primary"
+        [disabled]="loginForm.invalid"
+        >Submit</button>
+</form>
