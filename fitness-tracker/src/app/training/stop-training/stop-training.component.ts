@@ -12,5 +12,4 @@ export class StopTrainingComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
